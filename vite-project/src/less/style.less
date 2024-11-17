@@ -1,0 +1,113 @@
+@import 'normalize.css';
+@import 'menu.less';
+
+@color-black: #131417;
+@color-white: #FAFAFA;
+@color-grey: #252830;
+@color-red: #EB5757;
+@color-orange: #F2994A;
+
+@tablet-width: 768px;
+
+a {
+    color: @color-white;
+    text-decoration: none;
+    &:hover {
+        color: @color-red;
+    }
+}
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;    
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    & li {
+        padding: 0;
+        margin: 0;
+    }
+}
+header {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", "Arial", sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    background-image: url('public/img/alpaca.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+    @media (max-width: @tablet-width) {
+        width: 768px;
+        background:
+		linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+		url('public/img/alpaca.png');
+    }
+}
+.header {
+    // height: 80px;
+    // width: 100vw;
+    // background-color: @color-black;
+    // display: flex;
+    // justify-content: space-around;
+    // align-items: center;
+    height: 80px;
+    width: 100vw;
+    background-color: @color-black;
+    margin: 0 auto;
+    box-shadow: 0px 4px 4px rgba(19, 20, 23, 0.4);
+}
+.header__block {
+    max-width: 1196px;
+    display: grid;
+    grid-template-columns: 46px 1fr 190px;
+    border: 1px solid red;
+    margin: 0 auto;
+    padding-top: 17px;
+    align-items: center;
+    grid-template-areas: "logo menu tel";
+    & div {
+        border: 1px solid green;
+        margin: 0 auto;
+    }
+    @media (max-width: @tablet-width) {
+        
+        max-width: 724px;
+        grid-template-columns: 46px 1fr 22px;
+        grid-template-areas: "logo tel menu";
+    }
+}
+.header__logo {
+    grid-area: logo;
+}
+.header__menu {
+    grid-area: menu;
+}
+.header__tel {
+    // position: relative;
+    // & a::before {
+    //     position: absolute;
+    //     content: "";
+    //     width: 24px;
+    //     height: 24px;
+    //     left: -36px;
+    //     background-image: url('public/img/icon-tel.svg');
+    //     background-repeat: no-repeat;
+    //     background-position: center;
+    // }
+    grid-area: tel;
+    & img {
+        padding-right: 8px;
+    }
+}
