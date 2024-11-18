@@ -7,7 +7,8 @@
 @color-red: #EB5757;
 @color-orange: #F2994A;
 
-@tablet-width: 768px;
+@tablet-width: 769px;
+@mobile-width: 376px;
 
 a {
     color: @color-white;
@@ -49,21 +50,21 @@ header {
     background-size: cover;
     min-height: 100vh;
     @media (max-width: @tablet-width) {
-        width: 768px;
+        width: @tablet-width;
+        background:
+		linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+		url('public/img/alpaca.png');
+    }
+    @media (max-width: @mobile-width) {
+        width: @mobile-width;
         background:
 		linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
 		url('public/img/alpaca.png');
     }
 }
 .header {
-    // height: 80px;
-    // width: 100vw;
-    // background-color: @color-black;
-    // display: flex;
-    // justify-content: space-around;
-    // align-items: center;
     height: 80px;
-    width: 100vw;
+    width: 100%;
     background-color: @color-black;
     margin: 0 auto;
     box-shadow: 0px 4px 4px rgba(19, 20, 23, 0.4);
@@ -72,21 +73,24 @@ header {
     max-width: 1196px;
     display: grid;
     grid-template-columns: 46px 1fr 190px;
-    border: 1px solid red;
     margin: 0 auto;
     padding-top: 17px;
     align-items: center;
     grid-template-areas: "logo menu tel";
     & div {
-        border: 1px solid green;
         margin: 0 auto;
     }
     @media (max-width: @tablet-width) {
-        
-        max-width: 724px;
+        max-width: @tablet-width;
         grid-template-columns: 46px 1fr 22px;
         grid-template-areas: "logo tel menu";
+        align-items: start;
+        @media (max-width: @mobile-width) {
+            max-width: 100vw;
+            // grid-template-columns: 1fr 30px 22px;
+        }
     }
+    
 }
 .header__logo {
     grid-area: logo;
@@ -95,19 +99,36 @@ header {
     grid-area: menu;
 }
 .header__tel {
-    // position: relative;
-    // & a::before {
-    //     position: absolute;
-    //     content: "";
-    //     width: 24px;
-    //     height: 24px;
-    //     left: -36px;
-    //     background-image: url('public/img/icon-tel.svg');
-    //     background-repeat: no-repeat;
-    //     background-position: center;
-    // }
     grid-area: tel;
     & img {
         padding-right: 8px;
+    }
+}
+@media (max-width: @tablet-width) {
+    .header__menu {
+        grid-area: menu;
+        padding-top: 18px;
+    }
+    .header__tel {
+        padding-top: 10px;
+    }
+}
+@media (max-width: @mobile-width) {
+    .tel {
+        padding-top: 10px;
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        border: 0;
+        padding: 0;
+        white-space: nowrap;    
+        clip-path: inset(100%);
+        clip: rect(0 0 0 0);
+        overflow: hidden;
+    }
+    .header__tel {
+        padding-top: 12px;
+        padding-left: 170px;
     }
 }

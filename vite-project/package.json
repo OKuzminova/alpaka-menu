@@ -6,8 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview",
-    "clear-cache": "npm cache clean --force"
+    "preview": "vite preview"
   },
   "devDependencies": {
     "less": "^4.2.0",
@@ -15,5 +14,8 @@
   },
   "dependencies": {
     "normalize.css": "^8.0.1"
+  },
+  "resolutions": {
+    "rollup": "npm:@rollup/wasm-node"
   }
 }

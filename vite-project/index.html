@@ -14,31 +14,43 @@
             <img src="public/img/logo.svg" alt="logo">
           </div>
           <div class="header__menu menu">
+            <a href="#" class="menu__button visually-hidden">
+              <span class="menu__button--line"></span> 
+              <span class="menu__button--line"></span> 
+              <span class="menu__button--line"></span> 
+            </a>
             <nav class="menu-nav nav">
-              <ul class="menu-nav">
-                <li><a href="#" title="Главная">Главная</a></li>
+              <ul class="menu-nav burger">
+                <li class="menu-nav__li"><a href="#" title="Главная">Главная</a></li>
                 <li class="nav__active">
-                  <a href="#" title="Основное меню">Основное меню <img src="public/img/arrow-up.svg" class="menu__button-triangle"></a>
+                  <a href="#" class="menu-nav__li-child" title="Основное меню">Основное меню <img src="public/img/arrow-up.svg" class="menu__button-triangle"></a>
                   <ul class="menu-nav__child visually-hidden">
-                    <li class="menu-nav__child--decor"><a href="#">Заказать вёрстку</a></li>
-                    <li><a href="#">Отправить макет на проверку</a></li>
-                    <li><a href="#">Хочу работать у вас</li>
-                    <li><a href="#">Есть предложение по работе с кл...<img src="public/img/arrow-up.svg" class="menu__button-triangle"></a></a></li>
+                    <li class="menu-nav__child--decor"><a href="#" class="menu-nav__li-child--second">Заказать вёрстку</a></li>
+                    <li><a href="#" class="menu-nav__li-child--second">Отправить макет на проверку</a></li>
+                    <li><a href="#" class="menu-nav__li-child--second">Хочу работать у вас</a></li>
+                    <li class="nav__active-child">
+                      <a href="#" class="menu-nav__li-child--second">Есть предложение по работе с кл...<img src="public/img/arrow-up.svg" class="menu__button-triangle--2"></a>
+                      <ul class="menu-nav__child-second visually-hidden">
+                        <li><a href="#" class="menu-nav__li-child--three">У меня есть оффер</a></li>
+                        <li class="menu-nav__child--decor2"><a href="#" class="menu-nav__li-child--three">Сделать партнёром</a></li>
+                      </ul>
+                    </li>
                   </ul>
                 </li>
-                <li><a href="#" title="Наши сервисы">Наши сервисы</a></li>
-                <li><a href="#" title="Контакты">Контакты</a></li>
+                <li class="menu-nav__li"><a href="#" title="Наши сервисы">Наши сервисы</a></li>
+                <li class="menu-nav__li"><a href="#" title="Контакты">Контакты</a></li>
               </ul>
             </nav>
-            <div class="menu__button visually-hidden">
+            <!-- <a href="#" class="menu__button visually-hidden">
+              button
               <span class="menu__button--line"></span> 
               <span class="menu__button--line"></span> 
               <span class="menu__button--line"></span> 
-            </div>
+            </a> -->
           </div>
           <div class="header__tel">
             <a href="tel:+13212223333" title="+1 (321) 222-33-33">
-              <span><img src="public/img/icon-tel.svg"></span><span>+1 (321) 222-33-33</span></a>
+              <span><img src="public/img/icon-tel.svg"></span><span class="tel">+1 (321) 222-33-33</span></a>
           </div>
         </div>
       </section>
