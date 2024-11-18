@@ -1,4 +1,4 @@
-import '../less/style.less';
+import '..//less/style.less';
 
 const navTag = document.querySelector(".nav");
 const btnBurger = document.querySelector(".menu__button");
