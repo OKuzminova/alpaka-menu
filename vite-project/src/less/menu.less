@@ -25,6 +25,20 @@
         background-color: @color-grey;
     }
 }
+@media (max-width: @mobile-width) {
+    nav .menu-nav {
+        margin-left: -100%;
+        width: 100vw;
+    }
+    .menu-nav__child {
+        width: 100vw;
+    }
+    .menu__button {
+        position: relative;
+        top: -8px;
+        left: -25px;
+    }
+}
 
 .menu__button {
     position: relative;

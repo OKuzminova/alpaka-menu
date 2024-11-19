@@ -18,13 +18,14 @@ if (width <= 768) {
     menu.classList.add("visually-hidden");
     btnBurger.addEventListener('click', function (event) {
         menuBurger.classList.add("menu-burger");
-        menu.classList.remove("visually-hidden");
-        menuChild.classList.remove("visually-hidden");
-        menuChildSecond.classList.remove("visually-hidden");
+        menu.classList.toggle("visually-hidden");
+        menuChild.classList.toggle("visually-hidden");
+        menuChildSecond.classList.toggle("visually-hidden");
 
     });
-    } else if (width <= 386) {
+    } else if (width <= 375) {
         tel.classList.add("visually-hidden");
+        menuBurger.classList.add("menu-burger");
     } else {
         navTag.classList.remove("visually-hidden");
         btnBurger.classList.add("visually-hidden"); 
